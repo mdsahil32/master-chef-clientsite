@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigationbar/Navigation';
 import CountryNav from '../components/CountryNav/CountryNav';
+import { Outlet } from 'react-router-dom';
 
 
 const CountryLayout = () => {
@@ -9,6 +10,7 @@ const CountryLayout = () => {
             {/* main */}
             <Navigation></Navigation>
             <CountryNav></CountryNav>
+            <Outlet></Outlet>
         </div>
     );
 };

@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import Main from './Main/Main';
 import CountryLayout from './CountryLayout/CountryLayout';
+import CountryChefs from './CountryChefs/CountryChefs';
+
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,13 @@ const router = createBrowserRouter([
   {
     path:'countries',
     element: <CountryLayout></CountryLayout>,
+    children:[
+     {
+      path:':id',
+      element: <CountryChefs></CountryChefs>,
+      loader:({params})=> fetch(`http://localhost:5000/countries/${params.id}`)
+     }
+    ]
   }
 ])
 
