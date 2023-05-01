@@ -1,16 +1,16 @@
 import React from 'react';
 import Navigation from '../components/Navigationbar/Navigation';
+import CountryNav from '../components/CountryNav/CountryNav';
 
-import { Outlet } from 'react-router-dom';
 
-const Main = () => {
+const CountryLayout = () => {
     return (
         <div>
-            {/* LoginLayout */}
+            {/* main */}
             <Navigation></Navigation>
-            <Outlet></Outlet>
+            <CountryNav></CountryNav>
         </div>
     );
 };
 
-export default Main;
+export default CountryLayout;
