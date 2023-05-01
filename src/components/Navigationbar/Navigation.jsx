@@ -1,19 +1,20 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
 import { FaRegUserCircle } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 const Navigation = () => {
     return (
-        <Navbar bg="light" variant="light">
-            <Container>
-                <Navbar.Brand><h3>GRAND MASTER CHEF</h3> </Navbar.Brand>
-                <Nav className="me-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#features">Blog</Nav.Link>
-                    <Nav.Link href="#pricing">Pricing</Nav.Link>
-                    <FaRegUserCircle style={{fontSize:'2rem'}}/>
-                </Nav>
-            </Container>
-        </Navbar>
+        <div class="navbar bg-base-100">
+            <div class="">
+                <h1 className='mx-12 text-2xl font-bold'>GRAND MASTER CHEF</h1>
+            </div>
+            <div className='text-center flex mx-auto gap-6'>
+                <Link>Home</Link>
+                <Link>Blog</Link>
+                <Link>Login</Link>
+                <FaRegUserCircle style={{ fontSize: '2rem' }} />
+
+            </div>
+        </div>
     );
 };
 
