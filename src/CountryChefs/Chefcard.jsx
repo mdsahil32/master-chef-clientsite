@@ -1,17 +1,19 @@
 import React from 'react';
+import { FaRegThumbsUp } from 'react-icons/fa';
 
 const Chefcard = ({data}) => {
     console.log(data);
-    const {chef_picture, chef_name,likes,number_of_recipes,years_of_experience} = data
+    const {chef_picture, chef_name,likes,number_of_recipes,years_of_experience,title, details} = data
     {/* newsCard */}
     return (
-            <div className="card card-side bg-base-100 shadow-xl">
-            <figure><img src="/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie"/></figure>
+            <div className="card card-side bg-base-100 shadow-xl my-5 mx-12">
+            <figure className='h-full w-80'><img src={chef_picture} alt="Movie"/></figure>
             <div className="card-body">
-              <h2 className="card-title">New movie is released!</h2>
-              <p>Click the button to watch on Jetflix app.</p>
+              <h2 className="card-title">{title}</h2>
+              <h2 className="card-title">Name: {chef_name}</h2>
+              <p>Recipe: {number_of_recipes} Experience: {years_of_experience} Year</p>
+              <span className='flex items-center'><FaRegThumbsUp/> {likes}</span>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">Watch</button>
               </div>
             </div>
           </div>
