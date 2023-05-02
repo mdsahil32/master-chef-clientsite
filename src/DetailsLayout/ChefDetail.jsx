@@ -8,7 +8,7 @@ const ChefDetail = () => {
     return (
         <div>
             <div className="card lg:card-side bg-base-100 shadow-xl mt-8 mx-12">
-                <figure className='h-96 w-full'><img className='h-full ' src={chef_picture} alt="Album" /></figure>
+                <div className='h-96 w-full'><img className='h-full' src={chef_picture} alt="Album" /></div>
                 <div className="card-body">
                     <h2 className="card-title text-2xl font-semibold">Chef: {title}</h2>
                     <h1 className='text-2xl font-semibold'>Name: {chef_name}</h1>

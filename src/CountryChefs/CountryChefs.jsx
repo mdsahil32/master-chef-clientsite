@@ -5,7 +5,7 @@ import Chefcard from './Chefcard';
 const CountryChefs = () => {
     const datas = useLoaderData()
     const {id} = useParams()
-    console.log(id);
+    // console.log(id);
     return (
         <div>
             {/* category */}
