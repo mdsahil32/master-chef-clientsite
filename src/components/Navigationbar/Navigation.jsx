@@ -12,7 +12,7 @@ const Navigation = () => {
                 <div className='text-center flex justify-end  gap-6'>
                     <Link to='/'>Home</Link>
                     <Link>Blog</Link>
-                    <Link>Login</Link>
+                    <Link to='/login'>Login</Link>
                     <FaRegUserCircle style={{ fontSize: '2rem' }} />
 
                 </div>

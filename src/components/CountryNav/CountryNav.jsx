@@ -11,10 +11,10 @@ const CountryNav = () => {
             .catch(error => console.log(error))
     }, [])
     return (
-        <div className='md:flex justify-between ms-8 md:mx-24 my-8 '>
+        <div className='md:flex justify-between ms-8 md:mx-24 md:my-14 my-8'>
             {
                 countries.map(country =>
-                    <h3 className='font-semibold '
+                    <h3 className='font-semibold  md:text-xl'
                     key={country.id}>
                        <Link to={`/country/${country.id}`} className='text-black text-decoration-none'>
                        {country.name}

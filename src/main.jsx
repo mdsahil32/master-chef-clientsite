@@ -11,6 +11,8 @@ import CountryLayout from './CountryLayout/CountryLayout';
 import CountryChefs from './CountryChefs/CountryChefs';
 import DetailLayout from './DetailsLayout/DetailLayout';
 import ChefDetail from './DetailsLayout/ChefDetail';
+import Login from './Login/Login/Login';
+import Register from './Login/Register/Register';
 
 
 const router = createBrowserRouter([
@@ -21,6 +23,14 @@ const router = createBrowserRouter([
       {
         path:'/',
         element: <Navigate to='/country/0'></Navigate>
+      },
+      {
+        path:'login',
+        element:<Login></Login>
+      },
+      {
+        path:'register',
+        element:<Register></Register>
       }
     ]
   },
