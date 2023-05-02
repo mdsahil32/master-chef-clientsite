@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FaRegThumbsUp } from 'react-icons/fa';
 import { useLoaderData } from 'react-router-dom';
 
 const ChefDetail = () => {
     const detail = useLoaderData()
 
     const { chef_picture, chef_name, likes, number_of_recipes, years_of_experience, title, details, specialty, chef_detail, viewRecipe } = detail
+    
+    
     return (
         <div>
             <div className="card lg:card-side bg-base-100 shadow-xl mt-8 mx-12">
@@ -13,10 +16,20 @@ const ChefDetail = () => {
                     <h2 className="card-title text-2xl font-semibold">Chef: {title}</h2>
                     <h1 className='text-2xl font-semibold'>Name: {chef_name}</h1>
                     <p>{chef_detail}</p>
-                    <p>Recipe: {number_of_recipes}
-                    <br />
-                    Experience: {years_of_experience} Year
-                    </p>
+                    <div className='flex justify-between'>
+                        <div>
+                            <p>Recipe: {number_of_recipes}
+                                <br />
+                                Experience: {years_of_experience} Year
+                            </p>
+                        </div>
+                        <div>
+                            <button className='bg-gray-600 hover:bg-gray-800 text-xl font-semibold text-white p-2 rounded-md'>Favorite</button>
+                        </div>
+                    </div>
+                    <div className='flex items-center'>
+                        <FaRegThumbsUp />{likes} <p className='ps-2'>likes</p>
+                    </div>
                 </div>
             </div>
             {/* view recipe */}
