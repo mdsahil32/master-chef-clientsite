@@ -9,7 +9,6 @@ const CountryChefs = () => {
     return (
         <div>
             {/* category */}
-            <h1>this is {datas.length}</h1>
             {
                 datas.map(data =>
                     <Chefcard

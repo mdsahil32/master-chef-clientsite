@@ -5,11 +5,11 @@ const Navigation = () => {
     return (
         <>
             {/* // navbar  */}
-            <div class="md:flex justify-between navbar bg-base-100">
+            <div class="md:flex justify-between md:px-12 navbar bg-base-100">
                 <div class="">
-                    <h1 className='md:mx-12 text-2xl font-bold'>GRAND MASTER CHEF</h1>
+                    <h1 className='text-2xl font-bold'>GRAND MASTER CHEF</h1>
                 </div>
-                <div className='text-center flex mx-auto gap-6'>
+                <div className='text-center flex justify-end  gap-6'>
                     <Link to='/'>Home</Link>
                     <Link>Blog</Link>
                     <Link>Login</Link>
