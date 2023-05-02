@@ -13,7 +13,7 @@ const ChefDetail = () => {
                     <h2 className="card-title text-2xl font-semibold">Chef: {title}</h2>
                     <h1 className='text-2xl font-semibold'>Name: {chef_name}</h1>
                     <p>{chef_detail}</p>
-                    <p>Recipe: {number_of_recipes} 
+                    <p>Recipe: {number_of_recipes}
                     <br />
                     Experience: {years_of_experience} Year
                     </p>

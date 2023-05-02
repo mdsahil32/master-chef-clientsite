@@ -13,46 +13,47 @@ import DetailLayout from './DetailsLayout/DetailLayout';
 import ChefDetail from './DetailsLayout/ChefDetail';
 import Login from './Login/Login/Login';
 import Register from './Login/Register/Register';
+import AuthProvider from './Providers/AuthProvider';
 
 
 const router = createBrowserRouter([
   {
-    path:'/',
-    element:<Main></Main>,
-    children:[
+    path: '/',
+    element: <Main></Main>,
+    children: [
       {
-        path:'/',
+        path: '/',
         element: <Navigate to='/country/0'></Navigate>
       },
       {
-        path:'login',
-        element:<Login></Login>
+        path: 'login',
+        element: <Login></Login>
       },
       {
-        path:'register',
-        element:<Register></Register>
+        path: 'register',
+        element: <Register></Register>
       }
     ]
   },
   {
-    path:'country',
+    path: 'country',
     element: <CountryLayout></CountryLayout>,
-    children:[
-     {
-      path:':id',
-      element: <CountryChefs></CountryChefs>,
-      loader:({params})=> fetch(`http://localhost:5000/countries/${params.id}`)
-     }
+    children: [
+      {
+        path: ':id',
+        element: <CountryChefs></CountryChefs>,
+        loader: ({ params }) => fetch(`http://localhost:5000/countries/${params.id}`)
+      }
     ]
   },
   {
-    path:'chefs',
+    path: 'chefs',
     element: <DetailLayout></DetailLayout>,
-    children:[
+    children: [
       {
-        path:':id',
-        element:<ChefDetail></ChefDetail>,
-        loader:({params})=> fetch(`http://localhost:5000/chefs/${params.id}`)
+        path: ':id',
+        element: <ChefDetail></ChefDetail>,
+        loader: ({ params }) => fetch(`http://localhost:5000/chefs/${params.id}`)
       }
     ]
   }
@@ -60,6 +61,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <AuthProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </AuthProvider>
   </React.StrictMode>,
 )

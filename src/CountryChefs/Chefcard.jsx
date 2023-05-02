@@ -7,7 +7,7 @@ const Chefcard = ({ data }) => {
   const { chef_picture, chef_name, likes, number_of_recipes, years_of_experience, title, details,code } = data
   {/* newsCard */ }
   return (
-    <div className="card md:h-80 md:card-side bg-base-100 shadow-xl my-5 mx-12">
+    <div className="card md:h-80 md:card-side bg-base-100 shadow-xl my-5 md:mx-16">
       <figure className='md:h-full md:w-96 '><img src={chef_picture} alt="Movie" /></figure>
       <div className="card-body my-12">
         <div className="card-actions justify-end">
