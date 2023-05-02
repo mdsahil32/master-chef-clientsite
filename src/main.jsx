@@ -9,6 +9,8 @@ import {
 import Main from './Main/Main';
 import CountryLayout from './CountryLayout/CountryLayout';
 import CountryChefs from './CountryChefs/CountryChefs';
+import DetailLayout from './DetailsLayout/DetailLayout';
+import ChefDetail from './DetailsLayout/ChefDetail';
 
 
 const router = createBrowserRouter([
@@ -31,6 +33,17 @@ const router = createBrowserRouter([
       element: <CountryChefs></CountryChefs>,
       loader:({params})=> fetch(`http://localhost:5000/countries/${params.id}`)
      }
+    ]
+  },
+  {
+    path:'chefs',
+    element: <DetailLayout></DetailLayout>,
+    children:[
+      {
+        path:':id',
+        element:<ChefDetail></ChefDetail>,
+        loader:({params})=> fetch(`http://localhost:5000/chefs/${params.id}`)
+      }
     ]
   }
 ])
