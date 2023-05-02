@@ -4,7 +4,7 @@ import { useLoaderData } from 'react-router-dom';
 const ChefDetail = () => {
     const detail = useLoaderData()
 
-    const { chef_picture, chef_name, likes, number_of_recipes, years_of_experience, title, details, code, chef_detail, viewRecipe } = detail
+    const { chef_picture, chef_name, likes, number_of_recipes, years_of_experience, title, details, specialty, chef_detail, viewRecipe } = detail
     return (
         <div>
             <div className="card lg:card-side bg-base-100 shadow-xl mt-8 mx-12">

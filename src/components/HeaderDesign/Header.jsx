@@ -4,7 +4,7 @@ const Header = () => {
     
     return (
         // banner image
-        <div style={{
+        <div className='px-2' style={{
              width: 'auto', 
              height:'100vh',
              class:'responsive',
@@ -13,7 +13,7 @@ const Header = () => {
             <h1 className='ms-12 pt-24 text-4xl text-white  md:text-8xl font-bold font-serif'>WELCOME 
             <br /> GRAND 
             <br /> MASTER CHEF</h1>
-            <button className='bg-white hover:bg-gray-500 text-xl font-semibold p-2 rounded-sm ms-12 mt-6'>Visit Website</button>
+            <button className='bg-white hover:bg-gray-500 text-xl font-semibold p-2 rounded-md ms-12 mt-6'>Get Start</button>
         </div>
 
     );
