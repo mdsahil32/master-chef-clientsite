@@ -17,6 +17,7 @@ import Register from './Login/Register/Register';
 import AuthProvider from './Providers/AuthProvider';
 import PrivateRoute from './PrivateRoutes/PrivateRoute';
 import ErrorPage from './components/ErrorPage/ErrorPage';
+import Blog from './components/Blog/Blog';
 
 
 const router = createBrowserRouter([
@@ -30,15 +31,20 @@ const router = createBrowserRouter([
         element: <Navigate to='/country/0'></Navigate>
       },
       {
+        path: 'blog',
+        element: <Blog></Blog>
+      },
+      {
         path: 'login',
         element: <Login></Login>
       },
       {
         path: 'register',
         element: <Register></Register>
-      }
+      },
     ]
   },
+  
   {
     path: 'country',
     element: <CountryLayout></CountryLayout>,
@@ -47,7 +53,7 @@ const router = createBrowserRouter([
         path: ':id',
         element: <CountryChefs></CountryChefs>,
         loader: ({ params }) => fetch(`http://localhost:5000/countries/${params.id}`)
-      }
+      },
     ]
   },
   {

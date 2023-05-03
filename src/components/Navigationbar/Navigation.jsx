@@ -28,7 +28,8 @@ const Navigation = () => {
                             <ul tabIndex={0} className="menu menu-compact dropdown-content  shadow bg-base-100 rounded-box ">
                                 <li tabIndex={0}>
                                     <div className='md:flex md:items-center gap-3 '>
-                                        <Link to='/'>Home</Link><Link>Blog</Link>
+                                        <Link to='/'>Home</Link>
+                                        <Link to='/blog'>Blog</Link>
                                         {user ? <>
                                             <button onClick={handleLogOut}>Logout</button> <p>{user?.displayName}</p> <img className='rounded-full h-12 w-12' src={user?.photoURL} alt="" /> </> :
                                             <Link to='/login'>Login</Link>
@@ -43,7 +44,8 @@ const Navigation = () => {
                         <ul className="menu menu-horizontal px-1">
                             <li tabIndex={0}>
                                 <div className='md:flex md:items-center gap-3 '>
-                                    <Link to='/'>Home</Link><Link>Blog</Link>
+                                    <Link to='/'>Home</Link>
+                                    <Link to='/blog'>Blog</Link>
                                     {user ? <>
                                         <button onClick={handleLogOut}>Logout</button> <p>{user?.displayName}</p> <img className='rounded-full h-12 w-12' src={user?.photoURL} alt="" /> </> :
                                         <Link to='/login'>Login</Link>
