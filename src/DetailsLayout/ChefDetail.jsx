@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaRegThumbsUp } from 'react-icons/fa';
 import { useLoaderData } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 
 const ChefDetail = () => {
     const detail = useLoaderData()
@@ -9,11 +9,23 @@ const ChefDetail = () => {
     console.log(btn);
     const { chef_picture, chef_name, likes, number_of_recipes, years_of_experience, title, details, specialty, chef_detail, viewRecipe } = detail
 
-    // const handleFavoriteBtn = () => {
-    //     setBtn(false)
-    //     toast('Add a favorite')
-    //     toast('hello')
-    // }
+    const handleFavoriteBtn = () => {
+        setBtn(false)
+
+    }
+    if (!btn) {
+        toast.success('Added favorite!', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
+
+    }
 
     return (
         <div>
@@ -30,8 +42,17 @@ const ChefDetail = () => {
                                 Experience: {years_of_experience} Year
                             </p>
                         </div>
+
                         <div>
-                            <button onClick={handleFavoriteBtn} className='bg-gray-600 hover:bg-gray-800 text-xl font-semibold text-white p-2 rounded-md' >Favorite</button>
+                        
+                            {
+                                !btn 
+                                ? 
+                                <ToastContainer className="w-10 h-10 flex" ></ToastContainer>
+                                :
+                                <button onClick={handleFavoriteBtn} className='bg-gray-600 hover:bg-gray-800 text-xl font-semibold text-white p-2 rounded-md' >Favorite</button>
+                            }
+
                         </div>
                     </div>
                     <div className='flex items-center'>
@@ -68,6 +89,7 @@ const ChefDetail = () => {
                 </div>
             </div>
         </div>
+
     );
 };
 

@@ -7,19 +7,17 @@ const CountryChefs = () => {
 
     return (
         <>
-            {/* category */}
-           
-                <div className='md:grid grid-cols-2'>
-            {
-                datas.map(data =>
-                    <Chefcard
-                        key={data.code}
-                        data={data}
-                    >
+            <div className='md:grid grid-cols-2'>
+                {
+                    datas.map(data =>
+                        <Chefcard
+                            key={data.code}
+                            data={data}
+                        >
 
-                    </Chefcard>
-                )
-            }
+                        </Chefcard>
+                    )
+                }
             </div>
         </>
     );

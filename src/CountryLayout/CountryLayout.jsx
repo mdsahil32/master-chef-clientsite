@@ -11,7 +11,6 @@ import ChefInfo from '../components/ChefInfo/ChefInfo';
 const CountryLayout = () => {
     return (
         <div>
-            {/* main */}
             <Navigation></Navigation>
             {/* banner img */}
             <Header></Header>

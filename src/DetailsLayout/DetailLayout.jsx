@@ -8,7 +8,7 @@ const DetailLayout = () => {
     console.log(detail);
     return (
         <div>
-            {/* newLayout */}
+            
             <Navigation></Navigation>
             <Outlet></Outlet>
             <Footer></Footer>
