@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
 import { FaRegThumbsUp } from 'react-icons/fa';
 import { useLoaderData } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const ChefDetail = () => {
     const detail = useLoaderData()
-
+    const [btn, setBtn] = useState(true)
+    console.log(btn);
     const { chef_picture, chef_name, likes, number_of_recipes, years_of_experience, title, details, specialty, chef_detail, viewRecipe } = detail
-    
-    
+
+    // const handleFavoriteBtn = () => {
+    //     setBtn(false)
+    //     toast('Add a favorite')
+    //     toast('hello')
+    // }
+
     return (
         <div>
             <div className="card lg:card-side bg-base-100 shadow-xl mt-8 mx-12">
@@ -24,7 +31,7 @@ const ChefDetail = () => {
                             </p>
                         </div>
                         <div>
-                            <button className='bg-gray-600 hover:bg-gray-800 text-xl font-semibold text-white p-2 rounded-md'>Favorite</button>
+                            <button onClick={handleFavoriteBtn} className='bg-gray-600 hover:bg-gray-800 text-xl font-semibold text-white p-2 rounded-md' >Favorite</button>
                         </div>
                     </div>
                     <div className='flex items-center'>

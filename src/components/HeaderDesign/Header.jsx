@@ -10,10 +10,10 @@ const Header = () => {
              class:'responsive',
              backgroundSize:'cover', backgroundImage: `url(${bg})` 
         }}>
-            <h1 className='ms-12 pt-24 text-4xl text-white  md:text-8xl font-bold font-serif'><span className='text-orange-500'>WELCOME</span> 
+            <h1 className='ms-12 pt-24 text-4xl text-white  md:text-8xl font-bold font-serif'><span className='text-orange-500 underline'>WELCOME</span> 
             <br /> GRAND 
             <br /> MASTER CHEF</h1>
-            <button className='bg-white hover:bg-gray-500 text-xl font-semibold p-2 rounded-md ms-12 mt-6'>Get Start</button>
+            <button className='bg-white hover:bg-black text-xl text-gray-500 font-semibold p-1 rounded-sm ms-12 mt-6'>Check Quality Food</button>
         </div>
 
     );

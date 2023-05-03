@@ -17,7 +17,7 @@ const Navigation = () => {
             {/* // navbar  */}
             <div class="md:flex justify-between md:px-24 bg-base-100 my-3">
                 <div class="">
-                    <h1 className='text-3xl  md:font-bold mx-2 '>GRAND MASTER CHEF</h1>
+                    <h1 className='text-3xl  md:font-bold mx-2 underline'>GRAND MASTER CHEF</h1>
                 </div>
                 <div className='text-center text-xl md:font-semibold flex md:justify-end md:gap-6  mx-2 '>
                     <div className='md:flex md:items-center gap-3 '>
