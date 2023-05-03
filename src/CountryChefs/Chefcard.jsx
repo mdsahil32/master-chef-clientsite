@@ -8,6 +8,7 @@ const Chefcard = ({ data }) => {
   {/* newsCard */ }
   return (
     <div className="card md:h-80 md:card-side bg-base-100 shadow-xl my-5 md:mx-16">
+      
       <figure className='md:h-full md:w-96 px-2'><img src={chef_picture} alt="Movie" /></figure>
       <div className="card-body">
         <div className="card-actions justify-end">

@@ -17,27 +17,20 @@ const Navigation = () => {
             {/* // navbar  */}
             <div class="md:flex justify-between md:px-24 bg-base-100 my-3">
                 <div class="">
-                    <h1 className='text-3xl  md:font-bold mx-2'>GRAND MASTER CHEF</h1>
+                    <h1 className='text-3xl  md:font-bold mx-2 '>GRAND MASTER CHEF</h1>
                 </div>
-                <div className='text-center text-xl md:font-semibold flex md:justify-end md:gap-6 mx-2 '>
-                    <div className='md:flex gap-3'>
+                <div className='text-center text-xl md:font-semibold flex md:justify-end md:gap-6  mx-2 '>
+                    <div className='md:flex md:items-center gap-3 '>
                     <Link to='/'>Home</Link>
                     <Link>Blog</Link>
 
                     {
                         user ?
-                            <button onClick={handleLogOut}>Logout</button> :
+                        <>
+                            <button onClick={handleLogOut}>Logout</button> <p>{user?.displayName}</p> <img className='rounded-full h-12 w-12' src={user?.photoURL} alt="" /> </>:
                             <Link to='/login'>Login</Link>
                     }
                     </div>
-                    {user &&
-                        <div className='flex '>
-                            <h1>{user.email}</h1>
-                            <FaRegUserCircle style={{ fontSize: '2rem' }} />
-                        </div>
-                    }
-
-
 
                 </div>
             </div>
