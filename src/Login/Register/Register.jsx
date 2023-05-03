@@ -24,7 +24,7 @@ const Register = () => {
         createUser(email, password)
         .then(result =>{
             const createUser = result.user;
-            setSuccess('Created your account now you visit our website.');
+            setSuccess('Created your account successfully now you visit our website.');
             
         })
         .catch(error =>{
