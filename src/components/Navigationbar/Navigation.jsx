@@ -16,7 +16,7 @@ const Navigation = () => {
             {/* // navbar  */}
             <div class="md:flex justify-between md:px-24 bg-base-100 my-1">
                 <div class="">
-                    <h1 className='text-3xl md:font-bold'>GRAND MASTER <span className='text-orange-500'>CHEF</span></h1>
+                    <h1 className='text-3xl text-center md:font-bold'>GRAND MASTER <span className='text-orange-500'>CHEF</span></h1>
                 </div>
 
                 <div className="navbar bg-base-100">
@@ -31,7 +31,7 @@ const Navigation = () => {
                                         <Link to='/'>Home</Link>
                                         <Link to='/blog'>Blog</Link>
                                         {user ? <>
-                                            <button onClick={handleLogOut}>Logout</button> <p>{user?.displayName}</p> <img className='rounded-full h-12 w-12' src={user?.photoURL} alt="" /> </> :
+                                            <button onClick={handleLogOut}>Logout</button><img className='rounded-full h-12 w-12' src={user?.photoURL} alt="" /> </> :
                                             <Link to='/login'>Login</Link>
                                         }
                                     </div>

@@ -52,7 +52,7 @@ const router = createBrowserRouter([
       {
         path: ':id',
         element: <CountryChefs></CountryChefs>,
-        loader: ({ params }) => fetch(`http://localhost:5000/countries/${params.id}`)
+        loader: ({ params }) => fetch(`https://grand-master-chef-server-mdsahil32.vercel.app/countries/${params.id}`)
       },
     ]
   },
@@ -63,7 +63,7 @@ const router = createBrowserRouter([
       {
         path: ':id',
         element: <PrivateRoute><ChefDetail></ChefDetail></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/chefs/${params.id}`)
+        loader: ({ params }) => fetch(`https://grand-master-chef-server-mdsahil32.vercel.app/chefs/${params.id}`)
       }
     ]
   }

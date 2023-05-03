@@ -4,7 +4,7 @@ import chefImg from '../../assets/imgs/confident-young-male-cook-chef-uniform-st
 const ChefInfo = () => {
     return (
         <div>
-            <h1 className='text-4xl font-serif my-6 md:pt-6 text-center'>Chef information <span className='text-orange-500'>must be Check</span> !</h1>
+            <h1 className='text-xl md:text-4xl font-serif my-6 md:pt-6 text-center'>Chef information <span className='text-orange-500'>must be Check</span> !</h1>
             <div className='grid grid-cols-1 md:grid-cols-2'>
                 <p className='px-12'>
                     1. A chef is a professional cook who has undergone formal training in culinary arts and has acquired the skills and knowledge necessary to prepare and cook a wide range of dishes.
