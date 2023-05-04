@@ -26,7 +26,7 @@ const Chefcard = ({ data }) => {
 
         <div className='card-actions justify-end items-center gap-6'>
         <span className='md:flex items-center'><FaRegThumbsUp /> {likes}</span>
-          <Link to={`/chefs/${code}`}><button className='bg-gray-500 hover:bg-gray-300 text-white font-medium p-2 rounded-lg'>See Details</button></Link>
+          <Link to={`/chefs/${code}`}><button className='bg-gray-500 hover:bg-gray-600 text-white font-medium p-2 rounded-md'>See Details</button></Link>
         </div>
       </div>
     </div>
