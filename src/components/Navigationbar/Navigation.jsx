@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 const Navigation = () => {
     const { user, logOut } = useContext(AuthContext)
@@ -28,11 +28,11 @@ const Navigation = () => {
                             <ul tabIndex={0} className="menu menu-compact dropdown-content  shadow bg-base-100 rounded-box ">
                                 <li tabIndex={0}>
                                     <div className='md:flex md:items-center gap-3 '>
-                                        <Link to='/'>Home</Link>
-                                        <Link to='/blog'>Blog</Link>
+                                        <NavLink className={({isActive}) => (isActive ? 'text-blue-600' : '')}  to='/'>Home</NavLink>
+                                        <NavLink className={({isActive}) => (isActive ? 'text-blue-600' : '')} to='/blog'>Blog</NavLink>
                                         {user ? <>
                                             <button onClick={handleLogOut}>Logout</button><img className='rounded-full h-12 w-12' src={user?.photoURL} alt="" /> </> :
-                                            <Link to='/login'>Login</Link>
+                                            <NavLink className={({isActive}) => (isActive ? 'text-blue-600' : '')} to='/login'>Login</NavLink>
                                         }
                                     </div>
                                 </li>
@@ -44,11 +44,11 @@ const Navigation = () => {
                         <ul className="menu menu-horizontal px-1">
                             <li tabIndex={0}>
                                 <div className='md:flex md:items-center gap-3 '>
-                                    <Link to='/'>Home</Link>
-                                    <Link to='/blog'>Blog</Link>
+                                    <NavLink className= {({isActive}) => (isActive ? 'text-blue-600' : '')} to='/'>Home</NavLink>
+                                    <NavLink className={({isActive}) => (isActive ? 'text-blue-600' : '')} to='/blog'>Blog</NavLink>
                                     {user ? <>
                                         <button onClick={handleLogOut}>Logout</button> <p>{user?.displayName}</p> <img className='rounded-full h-12 w-12' src={user?.photoURL} alt="" /> </> :
-                                        <Link to='/login'>Login</Link>
+                                        <NavLink className={({isActive}) => (isActive ? 'text-blue-600' : '')} to='/login'>Login</NavLink>
                                     }
                                 </div>
                             </li>
