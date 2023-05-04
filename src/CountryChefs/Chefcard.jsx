@@ -20,7 +20,7 @@ const Chefcard = ({ data }) => {
         <p>Recipe: {number_of_recipes} Experience: {years_of_experience}Year <br /> Rating: {rating}Star</p>
         <p><small>
           {
-            details.length < 80 ? <>{details}</> : <>{details.slice(0, 80)}... <span className='underline text-blue-500'>see more</span></>
+            details.length < 80 ? <>{details}</> : <>{details.slice(0, 80)}. . . . .</>
           }
           </small></p>
 

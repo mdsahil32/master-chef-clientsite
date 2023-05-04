@@ -28,11 +28,11 @@ const Navigation = () => {
                             <ul tabIndex={0} className="menu menu-compact dropdown-content  shadow bg-base-100 rounded-box ">
                                 <li tabIndex={0}>
                                     <div className='md:flex md:items-center gap-3 '>
-                                        <NavLink className={({isActive}) => (isActive ? 'text-blue-600' : '')}  to='/'>Home</NavLink>
-                                        <NavLink className={({isActive}) => (isActive ? 'text-blue-600' : '')} to='/blog'>Blog</NavLink>
+                                        <NavLink className={({ isActive }) => (isActive ? 'text-blue-600' : '')} to='/'>Home</NavLink>
+                                        <NavLink className={({ isActive }) => (isActive ? 'text-blue-600' : '')} to='/blog'>Blog</NavLink>
                                         {user ? <>
                                             <button onClick={handleLogOut}>Logout</button><img className='rounded-full h-12 w-12' src={user?.photoURL} alt="" /> </> :
-                                            <NavLink className={({isActive}) => (isActive ? 'text-blue-600' : '')} to='/login'>Login</NavLink>
+                                            <NavLink className={({ isActive }) => (isActive ? 'text-blue-600' : '')} to='/login'>Login</NavLink>
                                         }
                                     </div>
                                 </li>
@@ -44,13 +44,16 @@ const Navigation = () => {
                         <ul className="menu menu-horizontal px-1">
                             <li tabIndex={0}>
                                 <div className='md:flex md:items-center gap-3 '>
-                                    <NavLink className= {({isActive}) => (isActive ? 'text-blue-600' : '')} to='/'>Home</NavLink>
-                                    <NavLink className={({isActive}) => (isActive ? 'text-blue-600' : '')} to='/blog'>Blog</NavLink>
+                                    <NavLink className={({ isActive }) => (isActive ? 'text-blue-600' : '')} to='/'>Home</NavLink>
+                                    <NavLink className={({ isActive }) => (isActive ? 'text-blue-600' : '')} to='/blog'>Blog</NavLink>
                                     {user ? <>
-                                        <button onClick={handleLogOut}>Logout</button> <p>{user?.displayName}</p> <img className='rounded-full h-12 w-12' src={user?.photoURL} alt="" /> </> :
-                                        <NavLink className={({isActive}) => (isActive ? 'text-blue-600' : '')} to='/login'>Login</NavLink>
+                                        <button onClick={handleLogOut}>Logout</button> <div className="tooltip  tooltip-bottom" data-tip={user?.displayName}>
+                                            <img className='rounded-full h-12 w-12' src={user?.photoURL} alt="" />
+                                        </div>  </> :
+                                        <NavLink className={({ isActive }) => (isActive ? 'text-blue-600' : '')} to='/login'>Login</NavLink>
                                     }
                                 </div>
+
                             </li>
                         </ul>
                     </div>
