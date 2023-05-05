@@ -3,6 +3,7 @@ import Navigation from '../components/Navigationbar/Navigation';
 import spinner from '../../public/spinner.json'
 import { Outlet, useNavigation } from 'react-router-dom';
 import Lottie from 'lottie-react'
+import Footer from '../components/Footer/Footer';
 
 
 const Main = () => {
@@ -12,6 +13,8 @@ const Main = () => {
             <Navigation></Navigation>
              <div className='flex justify-center items-center'>{navigation.state === 'loading' && <Lottie animationData={spinner} /> }</div>
             <Outlet></Outlet>
+            
+            <Footer></Footer>
         </div>
     );
 };

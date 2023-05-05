@@ -28,7 +28,7 @@ const Blog = () => {
                 </Pdf>
             </div>
         </>
-    );
+    );f
 };
 
 export default Blog;
