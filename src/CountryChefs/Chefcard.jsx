@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Chefcard = ({ data }) => {
   // console.log(data);
   const { chef_picture, chef_name, likes, number_of_recipes, years_of_experience, title, details,code,specialty, rating } = data
-  {/* newsCard */ }
+  
   return (
     <div className="card  md:card-side bg-base-100 shadow-xl my-5 md:mx-16">
       
