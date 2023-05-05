@@ -62,9 +62,9 @@ const ChefDetail = () => {
             </div>
             {/* view recipe */}
             <h1 className='text-3xl font-bold text-center my-8'>Check Chef Recipe</h1>
-            <div className='flex mx-12 gap-6 mb-4'>
+            <div data-aos="fade-up" data-aos-duration="2000" className='flex mx-12 gap-6 mb-4'>
                 {/* 1 */}
-                <div className="card  bg-base-100 shadow-xl">
+                <div  className="card  bg-base-100 shadow-xl">
                     <div className="card-body">
                         <h2 className="card-title">Pasta</h2>
                         <p>{details}</p>
